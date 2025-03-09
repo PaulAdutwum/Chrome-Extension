@@ -31,14 +31,19 @@ This tool offers **voice navigation, screen reading, AI-powered form filling, an
 | **Version Control** | Git & GitHub |
 | **Testing & Debugging** | Jest, Chrome DevTools |
 
+## 📸 Screenshots  
+
+###  AI Accessibility Toolbar  
+This is the main **toolbar** that provides various accessibility tools, such as contrast and brightness adjustments, voice navigation, screen reader activation, AI form filling, and more.  
+<img width="739" alt="AI Accessibility Toolbar" src="https://github.com/user-attachments/assets/7b838010-697f-4301-92b1-dc66e23e46a5" />
+
 ---
 
-## Screenshots 
-[Toolbar]<img width="739" alt="Image" src="https://github.com/user-attachments/assets/7b838010-697f-4301-92b1-dc66e23e46a5" />
+###  Extension Popup Screen  
+This **popup screen** appears when the extension icon is clicked in the Chrome toolbar. It allows users to quickly access the accessibility features and toggle them on/off.  
+<img width="329" alt="Extension Popup Screen" src="https://github.com/user-attachments/assets/c1adfc69-2400-4b00-9ab9-f4f97b86f47d" />
 
-[Pop Up]<img width="329" alt="Image" src="https://github.com/user-attachments/assets/c1adfc69-2400-4b00-9ab9-f4f97b86f47d" />
-
-
+---
 ## Installation & Setup  
 
 ###  Clone the Repository  
