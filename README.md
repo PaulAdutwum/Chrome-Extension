@@ -34,12 +34,14 @@ This tool offers **voice navigation, screen reading, AI-powered form filling, an
 ---
 
 ## Screenshots 
+[Toolbar]<img width="739" alt="Image" src="https://github.com/user-attachments/assets/7b838010-697f-4301-92b1-dc66e23e46a5" />
+
+[Pop Up]<img width="329" alt="Image" src="https://github.com/user-attachments/assets/c1adfc69-2400-4b00-9ab9-f4f97b86f47d" />
 
 
+## Installation & Setup  
 
-## 🚀 Installation & Setup  
-
-### 1️⃣ Clone the Repository  
+###  Clone the Repository  
 ```bash
 git clone https://github.com/yourusername/AI-Accessibility-Extension.git  
 cd AI-Accessibility-Extension  
