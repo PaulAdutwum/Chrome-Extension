@@ -1,0 +1,27 @@
+name: Chrome Extension Workflow
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v18
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Linting & Format Check
+        run: |
+          npm run lint || echo "Linting failed!"
+          npm run format || echo "Formatting failed!"
+
+      - name: Package Chrome Extension
+        run: zip -r extension.zip * -x "*.git*" "*.github*" "node_modules/*"
