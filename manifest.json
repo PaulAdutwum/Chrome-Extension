@@ -1,0 +1,60 @@
+{
+    "manifest_version": 3,
+    "name": "Universal Accessibility Extension",
+    "version": "1.0",
+    "description": "An extension to make websites accessible for all users.",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage",
+      "tabs"
+    ],
+    "background": {
+      "service_worker": "background.js",
+      "type": "module"
+    },
+    
+"content_security_policy": {
+     "extension_pages": "script-src 'self'; object-src 'none'"
+},
+    "commands": {
+      "activate_extension": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+X",
+          "mac": "Command+Shift+X"
+        },
+        "description": "Activate Accessibility Tools"
+      }
+    },
+    "action": {
+  "default_popup": "popup.html",
+  "default_icon": {
+    "16": "icons/chat.png",
+    "48": "icons/form-fill.png",
+    "128": "icons/screen-reader.png"
+  }
+},
+"web_accessible_resources": [
+  {
+    "resources": [
+      "icons/colorblind.png",
+      "icons/epilepsy.png",
+      "icons/screen-reader.png",
+      "icons/microphone.png",
+      "icons/form-fill.png",
+      "icons/chat.png",
+      "icons/close.png"
+    ],
+    "matches": ["<all_urls>"]
+  }
+],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+        
+      }
+    ],
+   
+    "host_permissions": ["<all_urls>"]
+  }
