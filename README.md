@@ -44,9 +44,4 @@ This **popup screen** appears when the extension icon is clicked in the Chrome t
 <img width="329" alt="Extension Popup Screen" src="https://github.com/user-attachments/assets/c1adfc69-2400-4b00-9ab9-f4f97b86f47d" />
 
 ---
-## Installation & Setup  
 
-###  Clone the Repository  
-```bash
-git clone https://github.com/yourusername/AI-Accessibility-Extension.git  
-cd AI-Accessibility-Extension  
