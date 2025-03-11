@@ -4,9 +4,9 @@ let currentPageInfo = {
     pageContent: "No content available"
 };
 
-// ✅ Store API Key on Installation
+//  Store API Key on Installation
 chrome.runtime.onInstalled.addListener(() => {
-    console.log("🛠️ AI Accessibility Extension Installed!");
+    // console.log("🛠️ AI Accessibility Extension Installed!");
 
     fetch(chrome.runtime.getURL("env.local"))
         .then(response => response.text())
@@ -14,7 +14,7 @@ chrome.runtime.onInstalled.addListener(() => {
             const key = text.match(/OPENAI_API_KEY=(.+)/)?.[1]?.trim();
             if (key) {
                 chrome.storage.local.set({ "OPENAI_API_KEY": key });
-                console.log("✅ OpenAI API Key Loaded Successfully.");
+                console.log(" OpenAI API Key Loaded Successfully.");
             } else {
                 console.error("❌ OpenAI API Key not found in env.local file.");
             }
@@ -22,24 +22,24 @@ chrome.runtime.onInstalled.addListener(() => {
         .catch(error => console.error("⚠️ Error loading env.local file:", error));
 });
 
-// ✅ Listen for Messages from Content Scripts & Popup
+//  Listen for Messages from Content Scripts & Popup
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    console.log("📩 Message received in background.js:", message);
+    // console.log(" Message received in background.js:", message);
 
-    // ✅ **Update Active Page Context**
+    //  **Update Active Page Context**
     if (message.action === "updatePageContext") {
         currentPageInfo = {
             pageTitle: message.pageTitle || "Unknown",
             url: message.url || "Unknown",
             pageContent: message.pageContent || "No content available"
         };
-        console.log("🌍 Updated page context:", currentPageInfo);
+        // console.log(" Updated page context:", currentPageInfo);
         return;
     }
 
-    // ✅ **Process AI Requests**
+    //  **Process AI Requests**
     if (message.action === "fetchAIResponse") {
-        console.log("🔍 Processing AI request...");
+       // console.log(" Processing AI request...");
 
         chrome.storage.local.get("OPENAI_API_KEY", async (data) => {
             const OPENAI_API_KEY = data.OPENAI_API_KEY;
@@ -49,7 +49,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
                 return;
             }
 
-            console.log(`🔑 Using API Key: ${OPENAI_API_KEY.substring(0, 5)}********`);
+          
 
             try {
                 const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -79,7 +79,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
                 const result = await response.json();
                 if (result.choices && result.choices.length > 0) {
-                    console.log("✅ AI Response Received.");
+                   // console.log("AI Response Received.");
                     sendResponse({ response: result.choices[0].message.content.trim() });
                 } else {
                     sendResponse({ error: "No AI-generated response received." });
@@ -90,14 +90,14 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
             }
         });
 
-        return true;  // Keep the response channel open for async response
+        return true;  
     }
 
     sendResponse({ status: "unhandled_message" });
     return true;
 });
 
-// ✅ **Inject Content Script on Valid Webpages**
+
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     if (!tabs.length || !tabs[0].id) {
         console.warn("⚠️ No active tab found.");
@@ -106,7 +106,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
 
     const url = tabs[0].url;
 
-    // ✅ Prevent Injection on Restricted Chrome Pages
+   
     if (url.startsWith("chrome://") || url.startsWith("chrome-extension://")) {
         console.warn("⚠️ Cannot inject content script on restricted Chrome pages.");
         return;
@@ -116,6 +116,6 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         target: { tabId: tabs[0].id },
         files: ["content.js"]
     }).then(() => {
-        console.log("✅ Content script injected successfully.");
-    }).catch(err => console.error("❌ Failed to inject content script:", err));
+        console.log(" Content script injected successfully.");
+    }).catch(err => console.error(" Failed to inject content script:", err));
 });
