@@ -43,7 +43,8 @@
       "icons/microphone.png",
       "icons/form-fill.png",
       "icons/chat.png",
-      "icons/close.png"
+      "icons/close.png",
+      "env.local"
     ],
     "matches": ["<all_urls>"]
   }

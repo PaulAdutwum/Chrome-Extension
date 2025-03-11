@@ -1,1 +1,8 @@
-.env.local
+node_modules/
+.DS_Store
+.env
+env.local
+debug.log
+.vscode/
+*.log
+*.bak
