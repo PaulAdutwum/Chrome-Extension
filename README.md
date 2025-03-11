@@ -36,7 +36,7 @@ This tool offers **voice navigation, screen reading, AI-powered form filling, an
 
 ###  AI Accessibility Toolbar  
 This is the main **toolbar** that provides various accessibility tools, such as contrast and brightness adjustments, voice navigation, screen reader activation, AI form filling, and more.  
-<img width="739" alt="AI Accessibility Toolbar" src="https://github.com/user-attachments/assets/7b838010-697f-4301-92b1-dc66e23e46a5" />
+<img width="739" alt="AI Accessibility Toolbar" src="https://github.com/user-attachments/assets/09b03b6c-4137-4a7a-9cff-c35bdde7f481" />
 
 ---
 
