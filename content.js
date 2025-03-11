@@ -1,5 +1,5 @@
 
-console.log("✅ Content script loaded and listening for messages...");
+// console.log(" Content script loaded and listening for messages...");
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     console.log("📩 Message received in content script:", message);
@@ -9,7 +9,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
             console.log("🛠 Creating toolbar...");
             createToolbar();
         } else {
-            console.log("✅ Toolbar already exists.");
+           //  console.log(" Toolbar already exists.");
         }
         sendResponse({ status: "success", message: "Toolbar displayed successfully." });
     } else {
@@ -209,7 +209,7 @@ if (typeof window.voiceActive === "undefined") {
 
 function activateVoiceNavigation() {
     if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
-        console.error("⚠️ Speech Recognition not supported in this browser.");
+       //  console.error("⚠️ Speech Recognition not supported in this browser.");
         alert("Your browser does not support voice recognition.");
         return;
     }
@@ -267,7 +267,7 @@ function activateVoiceNavigation() {
         };
 
         recognition.onerror = (event) => {
-            console.error("⚠️ Voice recognition error:", event);
+           // console.error("⚠️ Voice recognition error:", event);
             if (event.error === "not-allowed") {
                 alert("Microphone access denied. Please enable microphone permissions.");
             } else if (event.error === "network") {
