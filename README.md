@@ -4,6 +4,7 @@
 
 The **AI Accessibility Extension** is a **Chrome extension** designed to enhance **web accessibility** for users with visual impairments, cognitive challenges, and other accessibility needs.  
 This tool offers **voice navigation, screen reading, AI-powered form filling, and customizable page adjustments** to ensure a seamless browsing experience.
+## Video Demo of Extension Coming Soon 🤩🔥
 
 ---
 
