@@ -1,4 +1,4 @@
-# 🚀 AI Accessibility Extension  
+# 🚀 EVOKE AI Accessibility Extension  
 
  🏆 Making the Web More Accessible for Everyone  
 
@@ -29,7 +29,6 @@ This tool offers **voice navigation, screen reading, AI-powered form filling, an
 | **AI & Automation** | OpenAI GPT API (for AI Chat & Form Filling) |
 | **Speech & Accessibility** | Web Speech API (for Voice Navigation & Screen Reader) |
 | **DevOps & CI/CD** | GitHub Actions (for automated testing & packaging) |
-| **Version Control** | Git & GitHub |
 | **Testing & Debugging** | Jest, Chrome DevTools |
 
 ## 📸 Screenshots  
